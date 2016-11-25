@@ -9,11 +9,12 @@ import {
   TouchableOpacity,
   ScrollView,
   Button,
+  TextInput,
 } from 'react-native';
 
 var HeaderBar = require('./HeaderBar');
 
-class MainPage extends Component {
+class CommentPage extends Component {
   render() {
     return (
       <Navigator
@@ -29,8 +30,6 @@ class MainPage extends Component {
     return (
       <View style={{flex: 1, alignItems: 'center', justifyContent:'center'}}>
         <ScrollView style={{paddingTop:50}}>
-        <TouchableHighlight style={{backgroundColor: 'yellow', padding: 10}}
-            onPress={this.gotoPersonPage.bind(this)}>
           <Text style={{backgrondColor: 'yellow', color: 'green'}}>
             In this we put the iframe from pol.is
             Mussum Ipsum, cacilds vidis litro abertis. 
@@ -41,13 +40,15 @@ class MainPage extends Component {
             Praesent lacinia ultrices consectetur. Sed non 
             ipsum felis. 
           </Text>
-        </TouchableHighlight>
+          <TextInput
+            style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+            onChangeText={(text) => this.setState({text})}
+          />
+          <Button 
+            onPress={() => onButtonPressCommentSave(this.props.navigator) } 
+            style={{left:0}}title="Send" color="#841584" accessibilityLabel="Push Notification" 
+          />
         </ScrollView>
-        <View>
-          <Text>Footer</Text>
-          <Button onPress={() => onButtonPressPush(this.props.navigator) } style={{left:0}}title="Push" color="#841584" accessibilityLabel="Push Notification" />
-          <Button onPress={() => onButtonPressPush(this.props.navigator) } title="Comment" color="#841584" accessibilityLabel="Comment on the" />
-        </View>
       </View>
     );
   }
@@ -58,11 +59,10 @@ class MainPage extends Component {
     });
   }
 }
-
-var onButtonPressPush = function(navigator) {
-    navigator.push({id: 'CommentPage'})
-};
-
+var onButtonPressCommentSave= function(navigator){
+  /* TODO: send comment for backend if ok go to MainPage else call a alert and stay in this page */ 
+  navigator.push({id: 'MainPage'})
+}
 var NavigationBarRouteMapper = {
   LeftButton(route, navigator, index, navState) {
     return (
@@ -85,4 +85,4 @@ var NavigationBarRouteMapper = {
   }
 };
 
-module.exports = MainPage;
+module.exports = CommentPage;
