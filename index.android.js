@@ -1,77 +1,85 @@
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
- * @flow
  */
-
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
   AppRegistry,
   StyleSheet,
   Text,
+  View,
   Navigator,
-  TouchableHighlight,
-  View
+  TouchableOpacity,
 } from 'react-native';
 
-import MyScene from './MyScene';
+var SplashPage = require('./SplashPage');
+var LoginPage = require('./LoginPage');
+var MainPage = require('./MainPage');
+var PersonPage = require('./PersonPage');
+var NoNavigatorPage = require('./NoNavigatorPage');
 
-export default class app_pushingtogether extends Component {
+class App extends Component {
   render() {
-    const routes = [
-      {title: 'Fisrt Scene', index:0},
-      {title: 'Second Scene', index:1},
-    ];
-
     return (
       <Navigator
-        initialRoute={routes[0]}
-        initialRouteStack={routes}
-        renderScene={(route, navigator ) => 
-          <TouchableHighlight onPress={() => {
-            if (route.index === 0) {
-              navigator.push(routes[1]);
-            } else {
-              navigator.pop();
+          initialRoute={{id: 'SplashPage', name: 'Index'}}
+          renderScene={this.renderScene.bind(this)}
+          configureScene={(route) => {
+            if (route.sceneConfig) {
+              return route.sceneConfig;
             }
-          }}>
-          <Text>Hello {route.title}! </Text>
-          </TouchableHighlight>
-        }
-        navigationBar={
-          <Navigator.NavigationBar
-            routeMapper={{
-              LeftButton: (route, navigator, index, navState) =>
-                {  
-                  if (route.index === 0) { 
-                    return null; 
-                  } else { 
-                    return ( 
-                      <TouchableHighlight onPress={() => navigator.pop()}> 
-                        <Text>Back</Text>
-                      </TouchableHighlight> ); 
-                  } 
-                },
-              RightButton: (route, navigator, index, navState) =>
-                { return ( <Text>Done</Text> ); },
-              Title: (route, navigator, index, navState) =>
-                { return ( <Text>Awesome NavBar</Text> ); },
-            }}
-            style={{backgroundColor: 'gray'}} 
-          />
-        }
-        style={{ padding: 100 }}
-      />
-      //<View style={styles.container}>
-      //  <Text style={styles.welcome}>
-      //    E foi assim que começou a história! 
-      //  </Text>
-      //</View>
+            return Navigator.SceneConfigs.FloatFromRight;
+          }} />
+    );
+  }
+  renderScene(route, navigator) {
+    var routeId = route.id;
+    if (routeId === 'SplashPage') {
+      return (
+        <SplashPage
+          navigator={navigator} />
+      );
+    }
+    if (routeId === 'LoginPage') {
+      return (
+        <LoginPage
+          navigator={navigator} />
+      );
+    }
+    if (routeId === 'MainPage') {
+      return (
+        <MainPage
+            navigator={navigator} />
+      );
+    }
+    if (routeId === 'PersonPage') {
+      return (
+        <PersonPage
+          navigator={navigator} />
+      );
+    }
+    if (routeId === 'NoNavigatorPage') {
+      return (
+        <NoNavigatorPage
+            navigator={navigator} />
+      );
+    }
+    return this.noRoute(navigator);
+
+  }
+  noRoute(navigator) {
+    return (
+      <View style={{flex: 1, alignItems: 'stretch', justifyContent: 'center'}}>
+        <TouchableOpacity style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}
+            onPress={() => navigator.pop()}>
+          <Text style={{color: 'red', fontWeight: 'bold'}}>No existem rotas para este contenido</Text>
+        </TouchableOpacity>
+      </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
+var styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -90,4 +98,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('app_pushingtogether', () => app_pushingtogether);
+AppRegistry.registerComponent('app_pushingtogether', () => App);
