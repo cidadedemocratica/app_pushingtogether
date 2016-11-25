@@ -26,10 +26,10 @@ class LoginPage extends Component {
   renderScene(route, navigator) {
     return (
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text>Sign In</Text>
+        <Text style={s.sign} >Sign In</Text>
         <Button onPress={() => onButtonPressFacebook(this.props.navigator) } title="Login with Facebook" color="#841584" accessibilityLabel="Login to facebook" />
         <Text>If you enter with facebook you agree with our terms of use</Text>
-        <Button onPress={onButtonPressGoogle} title="Login with Google" color="#841584" accessibilityLabel="Login to facebook" />
+        <Button onPress={() => onButtonPressGoogle(this.props.navigator)} title="Login with Google" color="#841584" accessibilityLabel="Login to facebook" />
         <Text>If you enter with google you agree with our terms of use</Text>
         <Text>If you click 'Sign in with Facebook' and are not a pol.is user, you will be registered and you agree to the pol.is terms and privacy policy</Text>
       </View>
@@ -60,11 +60,14 @@ var NavigationBarRouteMapper = {
 var onButtonPressFacebook = function(navigator) {
     navigator.push({id: 'MainPage'})
 };
-var onButtonPressGoogle = function() {
+var onButtonPressGoogle = function(navigator) {
+    navigator.push({id: 'MainPage'})
 };
 
 const s = StyleSheet.create({
- 
+  sign :{
+    fontSize: 35,
+  }
 
 });
 module.exports = LoginPage;

@@ -9,6 +9,8 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
+var HeaderBar = require('./HeaderBar');
+
 class MainPage extends Component {
   render() {
     return (
@@ -26,7 +28,16 @@ class MainPage extends Component {
       <View style={{flex: 1, alignItems: 'center', justifyContent:'center'}}>
         <TouchableHighlight style={{backgroundColor: 'yellow', padding: 10}}
             onPress={this.gotoPersonPage.bind(this)}>
-          <Text style={{backgrondColor: 'yellow', color: 'green'}}>Content</Text>
+          <Text style={{backgrondColor: 'yellow', color: 'green'}}>
+            In this we put the iframe from pol.is
+            Mussum Ipsum, cacilds vidis litro abertis. 
+            Atirei o pau no gatis, per gatis num morreus. 
+            Copo furadis é disculpa de bebadis, arcu quam 
+            euismod magna. Si num tem leite então bota uma 
+            pinga aí cumpadi! Nec orci ornare consequat. 
+            Praesent lacinia ultrices consectetur. Sed non 
+            ipsum felis. 
+          </Text>
         </TouchableHighlight>
       </View>
     );
@@ -55,11 +66,8 @@ var NavigationBarRouteMapper = {
   },
   Title(route, navigator, index, navState) {
     return (
-      <TouchableOpacity style={{flex: 1, justifyContent: 'center'}}>
-        <Text style={{color: 'white', margin: 10, fontSize: 16}}>
-          Main Page 
-        </Text>
-      </TouchableOpacity>
+      <HeaderBar 
+        navigator={navigator} /> 
     );
   }
 };
