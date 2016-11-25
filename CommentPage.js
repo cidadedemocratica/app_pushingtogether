@@ -10,6 +10,7 @@ import {
   ScrollView,
   Button,
   TextInput,
+  Image,
 } from 'react-native';
 
 var HeaderBar = require('./HeaderBar');
@@ -21,7 +22,7 @@ class CommentPage extends Component {
           renderScene={this.renderScene.bind(this)}
           navigator={this.props.navigator}
           navigationBar={
-            <Navigator.NavigationBar style={{backgroundColor: '#246dd5'}}
+            <Navigator.NavigationBar
                 routeMapper={NavigationBarRouteMapper} />
           } />
     );
@@ -29,8 +30,8 @@ class CommentPage extends Component {
   renderScene(route, navigator) {
     return (
       <View style={{flex: 1, alignItems: 'center', justifyContent:'center'}}>
-        <ScrollView style={{paddingTop:50}}>
-          <Text style={{backgrondColor: 'yellow', color: 'green'}}>
+        <ScrollView style={{paddingTop:100}}>
+          <Text>
             In this we put the iframe from pol.is
             Mussum Ipsum, cacilds vidis litro abertis. 
             Atirei o pau no gatis, per gatis num morreus. 
@@ -41,12 +42,15 @@ class CommentPage extends Component {
             ipsum felis. 
           </Text>
           <TextInput
-            style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+            multiline={true}
+            numberOfLines={4}
+            maxLenght={40}
+            style={{height: 40}}
             onChangeText={(text) => this.setState({text})}
           />
           <Button 
             onPress={() => onButtonPressCommentSave(this.props.navigator) } 
-            style={{left:0}}title="Send" color="#841584" accessibilityLabel="Push Notification" 
+            title="Send" color="blue" accessibilityLabel="Push Notification" 
           />
         </ScrollView>
       </View>
@@ -63,25 +67,23 @@ var onButtonPressCommentSave= function(navigator){
   /* TODO: send comment for backend if ok go to MainPage else call a alert and stay in this page */ 
   navigator.push({id: 'MainPage'})
 }
+
 var NavigationBarRouteMapper = {
   LeftButton(route, navigator, index, navState) {
     return (
-      <TouchableOpacity style={{flex: 1, justifyContent: 'center'}}
-          onPress={() => navigator.parentNavigator.pop()}>
-        <Text style={{color: 'white', margin: 10,}}>
-         Back
-        </Text>
-      </TouchableOpacity>
+      <View style={{padding:10}}>
+      <Image 
+        style={{width: 60, height: 60}}
+        source={require('./assets/images/ej_icon_03small.png')}
+      /> 
+      </View>
     );
   },
   RightButton(route, navigator, index, navState) {
     return null;
   },
   Title(route, navigator, index, navState) {
-    return (
-      <HeaderBar 
-        navigator={navigator} /> 
-    );
+    return null;
   }
 };
 

@@ -10,7 +10,7 @@ class HeaderBar extends Component {
   render() {
     return (
       <TouchableOpacity style={s.header}>
-        <Text>
+        <Text style={s.label}>
           Empujando Juntos
         </Text>
       </TouchableOpacity>
@@ -20,9 +20,10 @@ class HeaderBar extends Component {
 
 var s = StyleSheet.create({
   header: {
-    backgroundColor: 'blue',
     color: 'white',
+  },
+  label:{
     fontSize: 20,
-  }
+  },
 });
 module.exports = HeaderBar;
