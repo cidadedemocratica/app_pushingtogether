@@ -10,6 +10,7 @@ import {
   ScrollView,
   Button,
   Image,
+  WebView,
 } from 'react-native';
 
 var HeaderBar = require('./HeaderBar');
@@ -28,7 +29,7 @@ class MainPage extends Component {
   }
   renderScene(route, navigator) {
     return (
-      <View style={{flex: 1, alignItems: 'center', justifyContent:'center'}}>
+      <View style={{flex: 1}}>
         <ScrollView style={{padding:70}}>
           <Text>
             In this we put the iframe from pol.is
@@ -40,18 +41,19 @@ class MainPage extends Component {
             Praesent lacinia ultrices consectetur. Sed non
             ipsum felis.
           </Text>
+          <WebView source={{uri: 'https://google.com'}}  />
         </ScrollView>
-        <View>
-          <Button onPress={() => onButtonPressPush(this.props.navigator) } style={{left:0}} title="Push" color="#841584" accessibilityLabel="Push Notification" />
-          <Button onPress={() => onButtonPressComment(this.props.navigator) } title="Comment" color="#841584" accessibilityLabel="Comment on the" />
-          <Image
-            style={{width: 75, height: 75}}
-            source={require('./assets/images/ej_push_button_B_01.png')}
-          />
-          <Image
-            style={{width: 75, height: 75}}
-            source={require('./assets/images/ej_comment_button_A_01.png')}
-          />
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <View style={{padding:10}}>
+            <TouchableHighlight onPress={() => onButtonPressPush(this.props.navigator) }>
+            <Image style={{width: 75, height: 75}} source={require('./assets/images/ej_push_button_B_01.png')} />
+            </TouchableHighlight>
+          </View>
+          <View style={{padding:10}}>
+            <TouchableHighlight onPress={() => onButtonPressComment(this.props.navigator) }>
+            <Image style={{width: 75, height: 75}} source={require('./assets/images/ej_comment_button_A_01.png')}/>
+            </TouchableHighlight>
+          </View>
         </View>
       </View>
     );
