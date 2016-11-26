@@ -47,11 +47,11 @@ class LoginPage extends Component {
 var NavigationBarRouteMapper = {
   LeftButton(route, navigator, index, navState) {
     return (
-      <View style={{padding:10}}>
-      <Image 
-        style={{width: 60, height: 60}}
+      <View style={{padding:0}}>
+      <Image
+        style={{width: 75, height: 75}}
         source={require('./assets/images/ej_icon_03small.png')}
-      /> 
+      />
       </View>
     );
   },
@@ -73,6 +73,7 @@ var onButtonPressGoogle = function(navigator) {
 const s = StyleSheet.create({
   sign :{
     fontSize: 35,
+    margin: 20
   },
   text:{
     padding: 10,
