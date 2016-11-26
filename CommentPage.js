@@ -49,15 +49,9 @@ class CommentPage extends Component {
             style={{height: 40}}
             onChangeText={(text) => this.setState({text})}
           />
-          <UselessTextInput
-            multiline = {true}
-            numberOfLines = {4}
-            onChangeText={(text) => this.setState({text})}
-            value={this.state.text}
-          />
-          <Button
-            onPress={() => onButtonPressCommentSave(this.props.navigator) }
-            title="Send" color="blue" accessibilityLabel="Push Notification"
+          <Button 
+            onPress={() => onButtonPressCommentSave(this.props.navigator) } 
+            title="Send" color="blue" accessibilityLabel="Push Notification" 
           />
         </ScrollView>
       </View>
