@@ -49,8 +49,8 @@ var NavigationBarRouteMapper = {
     return (
       <View style={{padding:0}}>
       <Image
-        style={{width: 70, height: 50}}
-        source={require('./assets/images/ej_icon_03small.png')}
+        style={{width: 150, height: 100}}
+        source={require('./assets/images/ej_icon_03large.png')}
       />
       </View>
     );
