@@ -9,6 +9,7 @@ import {
 class SplashPage extends Component {
   componentWillMount() {
     var navigator = this.props.navigator;
+    //if (loged) { open the Main Page
     setTimeout(() => {
       navigator.replace({
         id: 'LoginPage',

@@ -97,7 +97,7 @@ class App extends Component {
 
 
 BackAndroid.addEventListener('hardwareBackPress', function() {  
-  if (_navigator.getCurrentRoutes().length === 1  ) {
+  if (_navigator.getCurrentRoutes().length === 2  ) {
      return false;
   }
   _navigator.pop();
