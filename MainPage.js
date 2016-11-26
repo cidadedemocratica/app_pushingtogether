@@ -32,13 +32,13 @@ class MainPage extends Component {
         <ScrollView style={{paddingTop:70}}>
           <Text>
             In this we put the iframe from pol.is
-            Mussum Ipsum, cacilds vidis litro abertis. 
-            Atirei o pau no gatis, per gatis num morreus. 
-            Copo furadis é disculpa de bebadis, arcu quam 
-            euismod magna. Si num tem leite então bota uma 
-            pinga aí cumpadi! Nec orci ornare consequat. 
-            Praesent lacinia ultrices consectetur. Sed non 
-            ipsum felis. 
+            Mussum Ipsum, cacilds vidis litro abertis.
+            Atirei o pau no gatis, per gatis num morreus.
+            Copo furadis é disculpa de bebadis, arcu quam
+            euismod magna. Si num tem leite então bota uma
+            pinga aí cumpadi! Nec orci ornare consequat.
+            Praesent lacinia ultrices consectetur. Sed non
+            ipsum felis.
           </Text>
         </ScrollView>
         <View>
@@ -67,11 +67,11 @@ var onButtonPressComment = function(navigator) {
 var NavigationBarRouteMapper = {
   LeftButton(route, navigator, index, navState) {
     return (
-      <View style={{padding:10}}>
-      <Image 
-        style={{width: 60, height: 60}}
+      <View style={{padding:0}}>
+      <Image
+        style={{width: 70, height: 50}}
         source={require('./assets/images/ej_icon_03small.png')}
-      /> 
+      />
       </View>
     );
   },
