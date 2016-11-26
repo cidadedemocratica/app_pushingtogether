@@ -10,7 +10,6 @@ import {
   ScrollView,
   Button,
   TextInput,
-  UselessTextInput,
   Image,
 } from 'react-native';
 

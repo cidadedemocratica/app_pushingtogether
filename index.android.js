@@ -10,6 +10,7 @@ import {
   View,
   Navigator,
   TouchableOpacity,
+  BackAndroid,
 } from 'react-native';
 
 var SplashPage = require('./SplashPage');
@@ -19,7 +20,7 @@ var PersonPage = require('./PersonPage');
 var CommentPage = require('./CommentPage');
 var PushPage = require('./PushPage');
 var NoNavigatorPage = require('./NoNavigatorPage');
-
+var _navigator;
 class App extends Component {
   render() {
     return (
@@ -35,6 +36,7 @@ class App extends Component {
     );
   }
   renderScene(route, navigator) {
+    _navigator = navigator;
     var routeId = route.id;
     if (routeId === 'SplashPage') {
       return (
@@ -92,6 +94,15 @@ class App extends Component {
     );
   }
 }
+
+
+BackAndroid.addEventListener('hardwareBackPress', function() {  
+  if (_navigator.getCurrentRoutes().length === 1  ) {
+     return false;
+  }
+  _navigator.pop();
+  return true;
+});
 
 var styles = StyleSheet.create({
   container: {

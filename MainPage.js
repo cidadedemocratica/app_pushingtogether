@@ -10,6 +10,7 @@ import {
   ScrollView,
   Button,
   Image,
+  WebView,
 } from 'react-native';
 
 var HeaderBar = require('./HeaderBar');
@@ -40,6 +41,7 @@ class MainPage extends Component {
             Praesent lacinia ultrices consectetur. Sed non
             ipsum felis.
           </Text>
+          <WebView source={{uri: 'https://google.com'}}  />
         </ScrollView>
         <View>
           <Button onPress={() => onButtonPressPush(this.props.navigator) } style={{left:0}} title="Push" color="#841584" accessibilityLabel="Push Notification" />
