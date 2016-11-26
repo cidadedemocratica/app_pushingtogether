@@ -10,6 +10,7 @@ import {
   ScrollView,
   Button,
   TextInput,
+  UselessTextInput,
   Image,
 } from 'react-native';
 
@@ -47,6 +48,12 @@ class CommentPage extends Component {
             maxLenght={40}
             style={{height: 40}}
             onChangeText={(text) => this.setState({text})}
+          />
+          <UselessTextInput
+            multiline = {true}
+            numberOfLines = {4}
+            onChangeText={(text) => this.setState({text})}
+            value={this.state.text}
           />
           <Button 
             onPress={() => onButtonPressCommentSave(this.props.navigator) } 

@@ -9,12 +9,13 @@ import {
   TouchableOpacity,
   ScrollView,
   Button,
+  TextInput,
   Image,
 } from 'react-native';
 
 var HeaderBar = require('./HeaderBar');
 
-class MainPage extends Component {
+class PushPage extends Component {
   render() {
     return (
       <Navigator
@@ -29,7 +30,7 @@ class MainPage extends Component {
   renderScene(route, navigator) {
     return (
       <View style={{flex: 1, alignItems: 'center', justifyContent:'center'}}>
-        <ScrollView style={{paddingTop:70}}>
+        <ScrollView style={{paddingTop:100}}>
           <Text>
             In this we put the iframe from pol.is
             Mussum Ipsum, cacilds vidis litro abertis. 
@@ -41,10 +42,6 @@ class MainPage extends Component {
             ipsum felis. 
           </Text>
         </ScrollView>
-        <View>
-          <Button onPress={() => onButtonPressPush(this.props.navigator) } style={{left:0}}title="Push" color="#841584" accessibilityLabel="Push Notification" />
-          <Button onPress={() => onButtonPressComment(this.props.navigator) } title="Comment" color="#841584" accessibilityLabel="Comment on the" />
-        </View>
       </View>
     );
   }
@@ -55,14 +52,10 @@ class MainPage extends Component {
     });
   }
 }
-
-var onButtonPressPush = function(navigator) {
-    navigator.push({id: 'PushPage'})
-};
-
-var onButtonPressComment = function(navigator) {
-    navigator.push({id: 'CommentPage'})
-};
+var onButtonPressPushSave= function(navigator){
+  /* TODO: send comment for backend if ok go to MainPage else call a alert and stay in this page */ 
+  navigator.push({id: 'MainPage'})
+}
 
 var NavigationBarRouteMapper = {
   LeftButton(route, navigator, index, navState) {
@@ -83,4 +76,4 @@ var NavigationBarRouteMapper = {
   }
 };
 
-module.exports = MainPage;
+module.exports = PushPage;

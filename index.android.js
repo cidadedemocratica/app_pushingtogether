@@ -17,6 +17,7 @@ var LoginPage = require('./LoginPage');
 var MainPage = require('./MainPage');
 var PersonPage = require('./PersonPage');
 var CommentPage = require('./CommentPage');
+var PushPage = require('./PushPage');
 var NoNavigatorPage = require('./NoNavigatorPage');
 
 class App extends Component {
@@ -38,6 +39,12 @@ class App extends Component {
     if (routeId === 'SplashPage') {
       return (
         <SplashPage
+          navigator={navigator} />
+      );
+    }
+    if (routeId === 'PushPage') {
+      return (
+        <PushPage
           navigator={navigator} />
       );
     }
