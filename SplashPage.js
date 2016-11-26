@@ -17,11 +17,10 @@ class SplashPage extends Component {
   }
   render() {
     return (
-      <View style={{flex: 1, backgroundColor: '#246dd5', alignItems: 'center', justifyContent: 'center'}}>
-        <Text style={{color: 'white', fontSize: 32,}}>Empujando Juntos</Text>
+      <View style={{flex: 1, backgroundColor: '#00abd7', alignItems: 'center'}}>
        <Image
-          source={require('./assets/images/ej_icon_03small.png')}
-        /> 
+          source={require('./assets/images/ej_icon_03splash.png')}
+        />
       </View>
     );
   }

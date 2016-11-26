@@ -47,7 +47,7 @@ class LoginPage extends Component {
 var NavigationBarRouteMapper = {
   LeftButton(route, navigator, index, navState) {
     return (
-      <View style={{padding:0}}>
+      <View style={{padding:0, width: 250, height: 150}}>
       <Image
         style={{width: 150, height: 100}}
         source={require('./assets/images/ej_icon_03large.png')}
