@@ -29,7 +29,7 @@ class MainPage extends Component {
   renderScene(route, navigator) {
     return (
       <View style={{flex: 1, alignItems: 'center', justifyContent:'center'}}>
-        <ScrollView style={{paddingTop:70}}>
+        <ScrollView style={{padding:70}}>
           <Text>
             In this we put the iframe from pol.is
             Mussum Ipsum, cacilds vidis litro abertis.
@@ -42,7 +42,15 @@ class MainPage extends Component {
           </Text>
         </ScrollView>
         <View>
-          <Button onPress={() => onButtonPressPush(this.props.navigator) } style={{left:0}}title="Push" color="#841584" accessibilityLabel="Push Notification" />
+          <Image
+            style={{width: 75, height: 75}}
+            source={require('./assets/images/ej_push_button_B_01.png')}
+          />
+          <Button onPress={() => onButtonPressPush(this.props.navigator) } style={{left:0}} title="Push" color="#841584" accessibilityLabel="Push Notification" />
+          <Image
+            style={{width: 75, height: 75}}
+            source={require('./assets/images/ej_comment_button_A_01.png')}
+          />
           <Button onPress={() => onButtonPressComment(this.props.navigator) } title="Comment" color="#841584" accessibilityLabel="Comment on the" />
         </View>
       </View>
