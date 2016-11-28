@@ -11,8 +11,8 @@ import {
   Image,
 } from 'react-native';
 
-var NavigationBarRouteMapper = require('./HeaderBar');
-var s = require('./LoginStyle');
+var HeaderBar = require('./partials/HeaderBar');
+var s = require('../styles/LoginStyle');
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 class LoginPage extends Component {
