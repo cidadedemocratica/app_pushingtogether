@@ -13,10 +13,10 @@ import {
   WebView,
 } from 'react-native';
 
-var NavigationBarRouteMapper = require('./HeaderBar');
-var s = require('./MainStyle');
+var NavigationBarRouteMapper = require('./partials/HeaderBar');
+var s = require('../assets/styles/MainStyle');
 
-class MainPage extends Component {
+export default class MainPage extends Component {
   render() {
     return (
       <Navigator
@@ -40,12 +40,12 @@ class MainPage extends Component {
         <View style={s.buttons}>
           <View style={s.view}>
             <TouchableHighlight onPress={() => onButtonPressPush(this.props.navigator) }>
-            <Image style={s.buttonImage} source={require('./assets/images/ej_push_button_B_01.png')} />
+            <Image style={s.buttonImage} source={require('../assets/images/ej_push_button_B_01.png')} />
             </TouchableHighlight>
           </View>
           <View style={s.view}>
             <TouchableHighlight onPress={() => onButtonPressComment(this.props.navigator) }>
-            <Image style={s.buttonImage} source={require('./assets/images/ej_comment_button_A_01.png')}/>
+            <Image style={s.buttonImage} source={require('../assets/images/ej_comment_button_A_01.png')}/>
             </TouchableHighlight>
           </View>
         </View>
@@ -67,5 +67,3 @@ var onButtonPressPush = function(navigator) {
 var onButtonPressComment = function(navigator) {
     navigator.push({id: 'CommentPage'})
 };
-
-module.exports = MainPage;

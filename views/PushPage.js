@@ -14,10 +14,10 @@ import {
 } from 'react-native';
 
 
-var NavigationBarRouteMapper = require('./HeaderBar');
-var s = require('./PushStyle');
+var NavigationBarRouteMapper = require('./partials/HeaderBar');
+var s = require('../assets/styles/PushStyle');
 
-class PushPage extends Component {
+export default class PushPage extends Component {
   render() {
     return (
       <Navigator
@@ -61,5 +61,3 @@ var onButtonPressPushSave= function(navigator){
   /* TODO: send comment for backend if ok go to MainPage else call a alert and stay in this page */ 
   navigator.push({id: 'MainPage'})
 }
-
-module.exports = PushPage;

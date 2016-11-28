@@ -6,9 +6,9 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-var s = require('./NoNavigatorStyle');
+var s = require('../assets/styles/NoNavigatorStyle');
 
-class NoNavigatorPage extends Component {
+export default class NoNavigatorPage extends Component {
   render() {
     var navigator = this.props.navigator;
     return (
@@ -21,5 +21,3 @@ class NoNavigatorPage extends Component {
     );
   }
 }
-
-module.exports = NoNavigatorPage;

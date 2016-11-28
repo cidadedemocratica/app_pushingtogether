@@ -13,14 +13,15 @@ import {
   BackAndroid,
 } from 'react-native';
 
-var SplashPage = require('./SplashPage');
-var LoginPage = require('./LoginPage');
-var MainPage = require('./MainPage');
-var PersonPage = require('./PersonPage');
-var CommentPage = require('./CommentPage');
-var PushPage = require('./PushPage');
-var NoNavigatorPage = require('./NoNavigatorPage');
+import SplashPage from './views/SplashPage';
+import LoginPage from './views/LoginPage';
+import MainPage from './views/MainPage';
+import PersonPage from './views/PersonPage';
+import CommentPage from './views/CommentPage';
+import PushPage from './views/PushPage';
+import NoNavigatorPage from './views/NoNavigatorPage';
 var _navigator;
+
 class App extends Component {
   render() {
     return (

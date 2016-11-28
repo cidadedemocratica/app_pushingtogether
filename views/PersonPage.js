@@ -8,6 +8,10 @@ import {
 } from 'react-native';
 
 class PersonPage extends Component {
+
+var NavigationBarRouteMapper = require('./partials/HeaderBar');
+
+export default class PersonPage extends Component {
   render() {
     return (
       <Navigator
@@ -68,5 +72,3 @@ var NavigationBarRouteMapper = {
     );
   }
 };
-
-module.exports = PersonPage;

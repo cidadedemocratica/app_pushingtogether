@@ -11,11 +11,11 @@ import {
   Image,
 } from 'react-native';
 
-var NavigationBarRouteMapper = require('./HeaderBar');
-var s = require('./LoginStyle');
+var NavigationBarRouteMapper = require('./partials/HeaderBar');
+var s = require('../assets/styles/LoginStyle.js');
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-class LoginPage extends Component {
+export default class LoginPage extends Component {
   render() {
     return (
       <Navigator
@@ -26,6 +26,7 @@ class LoginPage extends Component {
           } />
     );
   }
+
   renderScene(route, navigator) {
     return (
       <View style={s.all}>
@@ -58,5 +59,3 @@ var onButtonPressFacebook = function(navigator) {
 var onButtonPressGoogle = function(navigator) {
     navigator.push({id: 'MainPage'})
 };
-
-module.exports = LoginPage;
