@@ -6,7 +6,7 @@ import {
 
 module.exports = StyleSheet.create({
   header: {
-    color: 'white',
+    backgroundColor: 'transparent',
   },
   label:{
     fontSize: 20,
