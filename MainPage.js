@@ -30,7 +30,7 @@ class MainPage extends Component {
   renderScene(route, navigator) {
     return (
       <View style={{flex: 1}}>
-        <ScrollView style={{padding:70}}>
+        <ScrollView style={{paddingLeft:70,paddingRight:70}}>
           <Text>
             In this we put the iframe from pol.is
             Mussum Ipsum, cacilds vidis litro abertis.
@@ -41,8 +41,11 @@ class MainPage extends Component {
             Praesent lacinia ultrices consectetur. Sed non
             ipsum felis.
           </Text>
-          <WebView source={{uri: 'https://google.com'}}  />
         </ScrollView>
+        <WebView
+          javaScriptEnabled={true}
+          source={{uri: 'http://www.3plusx.de/idc/test.html'}}
+        />
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <View style={{padding:10}}>
             <TouchableHighlight onPress={() => onButtonPressPush(this.props.navigator) }>
