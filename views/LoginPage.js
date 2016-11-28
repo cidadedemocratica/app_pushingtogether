@@ -29,7 +29,9 @@ class LoginPage extends Component {
   renderScene(route, navigator) {
     return (
       <View style={s.all}>
-        <Text style={s.sign} >Sign In</Text>
+        <Text style={s.sign} >
+          <Icon name="sign-in" size={30} /> Sign In
+        </Text>
         <Icon.Button name="facebook" backgroundColor="#3b5998" onPress={() => onButtonPressFacebook(this.props.navigator)} accessibilityLabel="Login to facebook" >
           Login with Facebook
         </Icon.Button>

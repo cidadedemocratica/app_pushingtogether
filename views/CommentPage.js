@@ -15,6 +15,7 @@ import {
 
 var HeaderBar = require('./partials/HeaderBar');
 var s = require('../styles/CommentStyle');
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 class CommentPage extends Component {
   render() {
@@ -51,10 +52,10 @@ class CommentPage extends Component {
             style={s.input}
             onChangeText={(text) => this.setState({text})}
           />
-          <Button 
-            onPress={() => onButtonPressCommentSave(this.props.navigator) } 
-            title="Send" color="blue" accessibilityLabel="Push Notification" 
-          />
+          <Icon.Button name="send" onPress={() => onButtonPressCommentSave(this.props.navigator) } accessibilityLabel="Comment" >
+            Send
+          </Icon.Button>
+
         </ScrollView>
       </View>
     );
@@ -70,24 +71,5 @@ var onButtonPressCommentSave= function(navigator){
   /* TODO: send comment for backend if ok go to MainPage else call a alert and stay in this page */
   navigator.push({id: 'MainPage'})
 }
-
-var NavigationBarRouteMapper = {
-  LeftButton(route, navigator, index, navState) {
-    return (
-      <View>
-      <Image
-        style={s.logo}
-        source={require('./assets/images/ej_icon_03small.png')}
-      />
-      </View>
-    );
-  },
-  RightButton(route, navigator, index, navState) {
-    return null;
-  },
-  Title(route, navigator, index, navState) {
-    return null;
-  }
-};
 
 module.exports = CommentPage;
