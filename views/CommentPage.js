@@ -13,6 +13,8 @@ import {
   Image,
 } from 'react-native';
 
+var NavigationBarRouteMapper = require('./partials/HeaderBar');
+var s = require('../assets/styles/CommentStyle');
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 var NavigationBarRouteMapper = require('./HeaderBar');
