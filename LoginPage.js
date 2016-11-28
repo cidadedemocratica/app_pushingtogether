@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 
 var HeaderBar = require('./HeaderBar');
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 class LoginPage extends Component {
   render() {
@@ -28,9 +29,13 @@ class LoginPage extends Component {
     return (
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <Text style={s.sign} >Sign In</Text>
-        <Button onPress={() => onButtonPressFacebook(this.props.navigator) } title="Login with Facebook" color="#841584" accessibilityLabel="Login to facebook" />
+        <Icon.Button name="facebook" backgroundColor="#3b5998" onPress={() => onButtonPressFacebook(this.props.navigator)} accessibilityLabel="Login to facebook" >
+          Login with Facebook
+        </Icon.Button>
         <Text style={s.text}>If you enter with facebook you agree with our terms of use</Text>
-        <Button onPress={() => onButtonPressGoogle(this.props.navigator)} title="Login with Google" color="#841584" accessibilityLabel="Login to facebook" />
+        <Icon.Button name="google" backgroundColor="#4285f4" onPress={() => onButtonPressGoogle(this.props.navigator)} accessibilityLabel="Login to google" >
+          Sign in with Google
+        </Icon.Button>
         <Text style={s.text}>If you enter with google you agree with our terms of use</Text>
         <Text style={s.text}>If you click 'Sign in with Facebook' and are not a pol.is user, you will be registered and you agree to the pol.is terms and privacy policy</Text>
       </View>
