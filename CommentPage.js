@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 
 var HeaderBar = require('./HeaderBar');
+var s = require('./CommentStyle');
 
 class CommentPage extends Component {
   render() {
@@ -29,10 +30,12 @@ class CommentPage extends Component {
   }
   renderScene(route, navigator) {
     return (
-      <View style={{flex: 1, alignItems: 'center', justifyContent:'center'}}>
-        <ScrollView style={{paddingTop:100}}>
+      <View style={s.all}>
+        <ScrollView style={s.content}>
+          <Text style={s.title}>
+            Title
+          </Text>
           <Text>
-            In this we put the iframe from pol.is
             Mussum Ipsum, cacilds vidis litro abertis.
             Atirei o pau no gatis, per gatis num morreus.
             Copo furadis é disculpa de bebadis, arcu quam
@@ -45,7 +48,7 @@ class CommentPage extends Component {
             multiline={true}
             numberOfLines={4}
             maxLenght={40}
-            style={{height: 40}}
+            style={s.input}
             onChangeText={(text) => this.setState({text})}
           />
           <Button 
@@ -71,9 +74,9 @@ var onButtonPressCommentSave= function(navigator){
 var NavigationBarRouteMapper = {
   LeftButton(route, navigator, index, navState) {
     return (
-      <View style={{padding:0}}>
+      <View>
       <Image
-        style={{width: 70, height: 50}}
+        style={s.logo}
         source={require('./assets/images/ej_icon_03small.png')}
       />
       </View>

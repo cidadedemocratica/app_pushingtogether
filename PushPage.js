@@ -13,7 +13,9 @@ import {
   Image,
 } from 'react-native';
 
-var HeaderBar = require('./HeaderBar');
+
+var NavigationBarRouteMapper = require('./HeaderBar');
+var s = require('./PushStyle');
 
 class PushPage extends Component {
   render() {
@@ -59,44 +61,5 @@ var onButtonPressPushSave= function(navigator){
   /* TODO: send comment for backend if ok go to MainPage else call a alert and stay in this page */ 
   navigator.push({id: 'MainPage'})
 }
-
-var NavigationBarRouteMapper = {
-  LeftButton(route, navigator, index, navState) {
-    return (
-      <View>
-      <Image 
-        style={s.icon}
-        source={require('./assets/images/ej_icon_03small.png')}
-      /> 
-      </View>
-    );
-  },
-  RightButton(route, navigator, index, navState) {
-    return null;
-  },
-  Title(route, navigator, index, navState) {
-    return null;
-  }
-};
-
-var s = StyleSheet.create({
-  icon: {
-    width: 70, 
-    height: 50
-  },
-  view:{
-    flex: 1, 
-    alignItems: 'center', 
-    justifyContent:'center'
-  },
-  content: {
-    padding: 10
-  },
-  title: {
-    fontSize: 40,
-    padding: 10,
-    fontWeight: 'bold'
-  }
-});
 
 module.exports = PushPage;
