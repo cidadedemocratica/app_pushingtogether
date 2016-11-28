@@ -30,19 +30,13 @@ class MainPage extends Component {
   renderScene(route, navigator) {
     return (
       <View style={{flex: 1}}>
-        <ScrollView style={{paddingLeft:70,paddingRight:70}}>
+        <ScrollView style={{paddingLeft:20,paddingRight:20}}>
           <Text>
-            In this we put the iframe from pol.is
-            Mussum Ipsum, cacilds vidis litro abertis.
-            Atirei o pau no gatis, per gatis num morreus.
-            Copo furadis é disculpa de bebadis, arcu quam
-            euismod magna. Si num tem leite então bota uma
-            pinga aí cumpadi! Nec orci ornare consequat.
-            Praesent lacinia ultrices consectetur. Sed non
-            ipsum felis.
+            Title/Subtitle/Some Text
           </Text>
         </ScrollView>
         <WebView
+          style={{padding:0,margin:0}}
           javaScriptEnabled={true}
           source={{uri: 'http://www.3plusx.de/idc/test.html'}}
         />
