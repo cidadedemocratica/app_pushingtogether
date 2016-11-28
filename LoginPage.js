@@ -27,7 +27,7 @@ class LoginPage extends Component {
   }
   renderScene(route, navigator) {
     return (
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <View style={s.all}>
         <Text style={s.sign} >Sign In</Text>
         <Icon.Button name="facebook" backgroundColor="#3b5998" onPress={() => onButtonPressFacebook(this.props.navigator)} accessibilityLabel="Login to facebook" >
           Login with Facebook
@@ -76,13 +76,24 @@ var onButtonPressGoogle = function(navigator) {
 };
 
 const s = StyleSheet.create({
+  all: {
+    flex: 1, 
+    alignItems: 'center', 
+    justifyContent: 'center'
+  },
   sign :{
     fontSize: 35,
-    margin: 20
+    paddingBottom: 30
   },
   text:{
-    padding: 10,
-  }
+    paddingLeft: 50,
+    paddingRight: 50,
+    paddingTop: 10,
+    paddingBottom: 10,
+  },
+  button: {
+    padding: 50
+  },
 
 });
 module.exports = LoginPage;

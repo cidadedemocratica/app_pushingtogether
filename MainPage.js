@@ -29,26 +29,22 @@ class MainPage extends Component {
   }
   renderScene(route, navigator) {
     return (
-      <View style={{flex: 1}}>
-        <ScrollView style={{paddingLeft:20,paddingRight:20}}>
-          <Text>
-            Title/Subtitle/Some Text
-          </Text>
-        </ScrollView>
+     <View style={s.all}>
         <WebView
-          style={{padding:0,margin:0}}
           javaScriptEnabled={true}
           source={{uri: 'http://www.3plusx.de/idc/test.html'}}
+          style={{marginTop: 50}}
+          scalesPageToFit={true}
         />
-        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-          <View style={{padding:10}}>
+        <View style={s.buttons}>
+          <View style={s.view}>
             <TouchableHighlight onPress={() => onButtonPressPush(this.props.navigator) }>
-            <Image style={{width: 75, height: 75}} source={require('./assets/images/ej_push_button_B_01.png')} />
+            <Image style={s.buttonImage} source={require('./assets/images/ej_push_button_B_01.png')} />
             </TouchableHighlight>
           </View>
-          <View style={{padding:10}}>
+          <View style={s.view}>
             <TouchableHighlight onPress={() => onButtonPressComment(this.props.navigator) }>
-            <Image style={{width: 75, height: 75}} source={require('./assets/images/ej_comment_button_A_01.png')}/>
+            <Image style={s.buttonImage} source={require('./assets/images/ej_comment_button_A_01.png')}/>
             </TouchableHighlight>
           </View>
         </View>
@@ -74,9 +70,9 @@ var onButtonPressComment = function(navigator) {
 var NavigationBarRouteMapper = {
   LeftButton(route, navigator, index, navState) {
     return (
-      <View style={{padding:0}}>
+      <View>
       <Image
-        style={{width: 70, height: 50}}
+        style={s.icon}
         source={require('./assets/images/ej_icon_03small.png')}
       />
       </View>
@@ -89,5 +85,29 @@ var NavigationBarRouteMapper = {
     return null;
   }
 };
+
+var s = StyleSheet.create({
+  buttons:{
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    position: 'absolute',
+    bottom: 10,
+    right:0
+  },
+  all: {
+    flex: 1,
+  },
+  view:{
+    padding: 10
+  },
+  icon: {
+    width: 70, 
+    height: 50
+  },
+  buttonImage: {
+    width: 75, 
+    height: 75
+  }
+});
 
 module.exports = MainPage;

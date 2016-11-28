@@ -85,10 +85,10 @@ class App extends Component {
   }
   noRoute(navigator) {
     return (
-      <View style={{flex: 1, alignItems: 'stretch', justifyContent: 'center'}}>
-        <TouchableOpacity style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}
+      <View style={s.view}>
+        <TouchableOpacity style={s.touchNoRoute}
             onPress={() => navigator.pop()}>
-          <Text style={{color: 'red', fontWeight: 'bold'}}>No existem rotas para este contenido</Text>
+          <Text style={s.textNoRoute}>No existem rotas para este contenido</Text>
         </TouchableOpacity>
       </View>
     );
@@ -97,30 +97,29 @@ class App extends Component {
 
 
 BackAndroid.addEventListener('hardwareBackPress', function() {  
-  if (_navigator.getCurrentRoutes().length === 2  ) {
+  if (_navigator.getCurrentRoutes().length === 2 ) {
      return false;
   }
   _navigator.pop();
   return true;
 });
 
-var styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+var s = StyleSheet.create({
+  view: {
+    flex: 1, 
+    alignItems: 'stretch', 
+    justifyContent: 'center'
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 0,
+  touchNoRoute: {
+    flex: 1, 
+    alignItems: 'center', 
+    justifyContent: 'center'
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  textNoRoute: {
+    color: 'red', 
+    fontWeight: 'bold'
+  }
+    
 });
 
 AppRegistry.registerComponent('app_pushingtogether', () => App);
