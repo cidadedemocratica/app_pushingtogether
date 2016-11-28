@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-class PersonPage extends Component {
+export default class PersonPage extends Component {
   render() {
     return (
       <Navigator
@@ -68,5 +68,3 @@ var NavigationBarRouteMapper = {
     );
   }
 };
-
-module.exports = PersonPage;

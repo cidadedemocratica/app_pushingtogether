@@ -14,13 +14,14 @@ import {
 } from 'react-native';
 
 import SplashPage from './views/SplashPage';
-var LoginPage = require('./views/LoginPage');
-var MainPage = require('./views/MainPage');
-var PersonPage = require('./views/PersonPage');
-var CommentPage = require('./views/CommentPage');
-var PushPage = require('./views/PushPage');
-var NoNavigatorPage = require('./views/NoNavigatorPage');
-var _navigator;
+import LoginPage from './views/LoginPage';
+import MainPage from './views/MainPage';
+import PersonPage from './views/PersonPage';
+import CommentPage from './views/CommentPage';
+import PushPage from ('./views/PushPage';
+import NoNavigatorPage from './views/NoNavigatorPage';
+import _navigator;
+
 class App extends Component {
   render() {
     return (

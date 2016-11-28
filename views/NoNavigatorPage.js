@@ -8,7 +8,7 @@ import {
 
 var s = require('../styles/NoNavigatorStyle');
 
-class NoNavigatorPage extends Component {
+export default class NoNavigatorPage extends Component {
   render() {
     var navigator = this.props.navigator;
     return (
@@ -21,5 +21,3 @@ class NoNavigatorPage extends Component {
     );
   }
 }
-
-module.exports = NoNavigatorPage;

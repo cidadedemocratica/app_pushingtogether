@@ -17,7 +17,7 @@ var HeaderBar = require('./partials/HeaderBar');
 var s = require('../styles/CommentStyle');
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-class CommentPage extends Component {
+export default class CommentPage extends Component {
   render() {
     return (
       <Navigator
@@ -71,5 +71,3 @@ var onButtonPressCommentSave= function(navigator){
   /* TODO: send comment for backend if ok go to MainPage else call a alert and stay in this page */
   navigator.push({id: 'MainPage'})
 }
-
-module.exports = CommentPage;

@@ -15,7 +15,7 @@ var HeaderBar = require('./partials/HeaderBar');
 var s = require('../styles/LoginStyle');
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-class LoginPage extends Component {
+export default class LoginPage extends Component {
   render() {
     return (
       <Navigator
@@ -58,5 +58,3 @@ var onButtonPressFacebook = function(navigator) {
 var onButtonPressGoogle = function(navigator) {
     navigator.push({id: 'MainPage'})
 };
-
-module.exports = LoginPage;
