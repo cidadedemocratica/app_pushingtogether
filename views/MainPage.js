@@ -16,7 +16,7 @@ import {
 var NavigationBarRouteMapper = require('./partials/HeaderBar');
 var s = require('../assets/styles/MainStyle');
 
-class MainPage extends Component {
+export default class MainPage extends Component {
   render() {
     return (
       <Navigator
@@ -67,5 +67,3 @@ var onButtonPressPush = function(navigator) {
 var onButtonPressComment = function(navigator) {
     navigator.push({id: 'CommentPage'})
 };
-
-module.exports = MainPage;
