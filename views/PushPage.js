@@ -14,8 +14,8 @@ import {
 } from 'react-native';
 
 
-var HeaderBar = require('./partials/HeaderBar');
-var s = require('../styles/PushStyle');
+var NavigationBarRouteMapper = require('./partials/HeaderBar');
+var s = require('../assets/styles/PushStyle');
 
 export default class PushPage extends Component {
   render() {

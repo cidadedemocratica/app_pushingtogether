@@ -13,8 +13,8 @@ import {
   WebView,
 } from 'react-native';
 
-var HeaderBar = require('./partials/HeaderBar');
-var s = require('../styles/MainStyle');
+var NavigationBarRouteMapper = require('./partials/HeaderBar');
+var s = require('../assets/styles/MainStyle');
 
 export default class MainPage extends Component {
   render() {
@@ -40,12 +40,12 @@ export default class MainPage extends Component {
         <View style={s.buttons}>
           <View style={s.view}>
             <TouchableHighlight onPress={() => onButtonPressPush(this.props.navigator) }>
-            <Image style={s.buttonImage} source={require('./assets/images/ej_push_button_B_01.png')} />
+            <Image style={s.buttonImage} source={require('../assets/images/ej_push_button_B_01.png')} />
             </TouchableHighlight>
           </View>
           <View style={s.view}>
             <TouchableHighlight onPress={() => onButtonPressComment(this.props.navigator) }>
-            <Image style={s.buttonImage} source={require('./assets/images/ej_comment_button_A_01.png')}/>
+            <Image style={s.buttonImage} source={require('../assets/images/ej_comment_button_A_01.png')}/>
             </TouchableHighlight>
           </View>
         </View>

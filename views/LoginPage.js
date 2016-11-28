@@ -11,8 +11,8 @@ import {
   Image,
 } from 'react-native';
 
-var HeaderBar = require('./partials/HeaderBar');
-var s = require('../styles/LoginStyle');
+var NavigationBarRouteMapper = require('./partials/HeaderBar');
+var s = require('../assets/styles/LoginStyle.js');
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class LoginPage extends Component {
@@ -26,6 +26,7 @@ export default class LoginPage extends Component {
           } />
     );
   }
+
   renderScene(route, navigator) {
     return (
       <View style={s.all}>

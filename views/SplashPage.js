@@ -20,7 +20,7 @@ export default class SplashPage extends Component {
     return (
       <View style={{flex: 1, backgroundColor: '#00abd7', alignItems: 'center'}}>
        <Image
-          source={require('./assets/images/ej_icon_03splash.png')}
+          source={require('../assets/images/ej_icon_03splash.png')}
         />
       </View>
     );

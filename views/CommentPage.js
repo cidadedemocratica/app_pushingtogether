@@ -13,8 +13,8 @@ import {
   Image,
 } from 'react-native';
 
-var HeaderBar = require('./partials/HeaderBar');
-var s = require('../styles/CommentStyle');
+var NavigationBarRouteMapper = require('./partials/HeaderBar');
+var s = require('../assets/styles/CommentStyle');
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class CommentPage extends Component {
