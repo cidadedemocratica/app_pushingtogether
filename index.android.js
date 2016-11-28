@@ -18,9 +18,9 @@ import LoginPage from './views/LoginPage';
 import MainPage from './views/MainPage';
 import PersonPage from './views/PersonPage';
 import CommentPage from './views/CommentPage';
-import PushPage from ('./views/PushPage';
+import PushPage from './views/PushPage';
 import NoNavigatorPage from './views/NoNavigatorPage';
-import _navigator;
+var _navigator;
 
 class App extends Component {
   render() {
