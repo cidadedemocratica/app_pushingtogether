@@ -5,7 +5,7 @@ import {
   Image,
 } from 'react-native';
 
-var s = require('./HeaderStyle');
+var s = require('../../assets/styles/partials/HeaderStyle');
 
 module.exports = {
   LeftButton(route, navigator, index, navState) {
@@ -13,7 +13,7 @@ module.exports = {
       <View>
       <Image
         style={s.logo}
-        source={require('./assets/images/ej_icon_03small.png')}
+        source={require('../../assets/images/ej_icon_03small.png')}
       />
       </View>
     );

@@ -13,13 +13,13 @@ import {
   BackAndroid,
 } from 'react-native';
 
-var SplashPage = require('./SplashPage');
-var LoginPage = require('./LoginPage');
-var MainPage = require('./MainPage');
-var PersonPage = require('./PersonPage');
-var CommentPage = require('./CommentPage');
-var PushPage = require('./PushPage');
-var NoNavigatorPage = require('./NoNavigatorPage');
+var SplashPage = require('./views/SplashPage');
+var LoginPage = require('./views/LoginPage');
+var MainPage = require('./views/MainPage');
+var PersonPage = require('./views/PersonPage');
+var CommentPage = require('./views/CommentPage');
+var PushPage = require('./views/PushPage');
+var NoNavigatorPage = require('./views/NoNavigatorPage');
 var _navigator;
 class App extends Component {
   render() {
