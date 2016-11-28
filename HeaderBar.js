@@ -1,29 +1,28 @@
 import React, { Component } from 'react';
 import {
   View,
-  Text,
   StyleSheet,
-  TouchableOpacity,
+  Image,
 } from 'react-native';
 
-class HeaderBar extends Component {
-  render() {
-    return (
-      <TouchableOpacity style={s.header}>
-        <Text style={s.label}>
-          Empujando Juntos
-        </Text>
-      </TouchableOpacity>
-    );
-  }
-}
+var s = require('./HeaderStyle');
 
-var s = StyleSheet.create({
-  header: {
-    color: 'white',
+module.exports = {
+  LeftButton(route, navigator, index, navState) {
+    return (
+      <View>
+      <Image
+        style={s.logo}
+        source={require('./assets/images/ej_icon_03small.png')}
+      />
+      </View>
+    );
   },
-  label:{
-    fontSize: 20,
+  RightButton(route, navigator, index, navState) {
+    return null;
   },
-});
-module.exports = HeaderBar;
+  Title(route, navigator, index, navState) {
+    return null;
+  }
+};
+

@@ -11,7 +11,8 @@ import {
   Image,
 } from 'react-native';
 
-var HeaderBar = require('./HeaderBar');
+var NavigationBarRouteMapper = require('./HeaderBar');
+var s = require('./LoginStyle');
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 class LoginPage extends Component {
@@ -49,25 +50,6 @@ class LoginPage extends Component {
   }
 }
 
-var NavigationBarRouteMapper = {
-  LeftButton(route, navigator, index, navState) {
-    return (
-      <View style={{padding:0, width: 250, height: 150}}>
-      <Image
-        style={{width: 150, height: 100}}
-        source={require('./assets/images/ej_icon_03large.png')}
-      />
-      </View>
-    );
-  },
-  RightButton(route, navigator, index, navState) {
-    return null;
-  },
-  Title(route, navigator, index, navState) {
-    return null;
-  }
-};
-
 var onButtonPressFacebook = function(navigator) {
     navigator.push({id: 'MainPage'})
 };
@@ -75,25 +57,4 @@ var onButtonPressGoogle = function(navigator) {
     navigator.push({id: 'MainPage'})
 };
 
-const s = StyleSheet.create({
-  all: {
-    flex: 1, 
-    alignItems: 'center', 
-    justifyContent: 'center'
-  },
-  sign :{
-    fontSize: 35,
-    paddingBottom: 30
-  },
-  text:{
-    paddingLeft: 50,
-    paddingRight: 50,
-    paddingTop: 10,
-    paddingBottom: 10,
-  },
-  button: {
-    padding: 50
-  },
-
-});
 module.exports = LoginPage;

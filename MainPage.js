@@ -13,7 +13,8 @@ import {
   WebView,
 } from 'react-native';
 
-var HeaderBar = require('./HeaderBar');
+var NavigationBarRouteMapper = require('./HeaderBar');
+var s = require('./MainStyle');
 
 class MainPage extends Component {
   render() {
@@ -66,48 +67,5 @@ var onButtonPressPush = function(navigator) {
 var onButtonPressComment = function(navigator) {
     navigator.push({id: 'CommentPage'})
 };
-
-var NavigationBarRouteMapper = {
-  LeftButton(route, navigator, index, navState) {
-    return (
-      <View>
-      <Image
-        style={s.icon}
-        source={require('./assets/images/ej_icon_03small.png')}
-      />
-      </View>
-    );
-  },
-  RightButton(route, navigator, index, navState) {
-    return null;
-  },
-  Title(route, navigator, index, navState) {
-    return null;
-  }
-};
-
-var s = StyleSheet.create({
-  buttons:{
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    position: 'absolute',
-    bottom: 10,
-    right:0
-  },
-  all: {
-    flex: 1,
-  },
-  view:{
-    padding: 10
-  },
-  icon: {
-    width: 70, 
-    height: 50
-  },
-  buttonImage: {
-    width: 75, 
-    height: 75
-  }
-});
 
 module.exports = MainPage;
