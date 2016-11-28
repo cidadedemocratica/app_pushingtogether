@@ -6,7 +6,7 @@ import {
   Image,
 } from 'react-native';
 
-class SplashPage extends Component {
+export default class SplashPage extends Component {
   componentWillMount() {
     var navigator = this.props.navigator;
     //if (loged) { open the Main Page
@@ -27,4 +27,3 @@ class SplashPage extends Component {
   }
 }
 
-module.exports = SplashPage;
