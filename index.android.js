@@ -13,7 +13,7 @@ import {
   BackAndroid,
 } from 'react-native';
 
-var SplashPage = require('./views/SplashPage');
+import SplashPage from './views/SplashPage';
 var LoginPage = require('./views/LoginPage');
 var MainPage = require('./views/MainPage');
 var PersonPage = require('./views/PersonPage');
