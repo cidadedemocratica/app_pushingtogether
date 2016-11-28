@@ -13,8 +13,8 @@ import {
   Image,
 } from 'react-native';
 
-var HeaderBar = require('./HeaderBar');
-var s = require('./CommentStyle');
+var HeaderBar = require('./partials/HeaderBar');
+var s = require('../styles/CommentStyle');
 
 class CommentPage extends Component {
   render() {

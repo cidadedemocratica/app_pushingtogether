@@ -13,8 +13,8 @@ import {
   WebView,
 } from 'react-native';
 
-var NavigationBarRouteMapper = require('./HeaderBar');
-var s = require('./MainStyle');
+var HeaderBar = require('./partials/HeaderBar');
+var s = require('../styles/MainStyle');
 
 class MainPage extends Component {
   render() {

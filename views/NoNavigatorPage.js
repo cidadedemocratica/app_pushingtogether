@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-var s = require('./NoNavigatorStyle');
+var s = require('../styles/NoNavigatorStyle');
 
 class NoNavigatorPage extends Component {
   render() {
