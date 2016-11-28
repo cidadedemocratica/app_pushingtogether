@@ -29,9 +29,12 @@ class PushPage extends Component {
   }
   renderScene(route, navigator) {
     return (
-      <View style={{flex: 1, alignItems: 'center', justifyContent:'center'}}>
-        <ScrollView style={{paddingTop:100}}>
-          <Text>
+      <View style={s.view}>
+        <ScrollView style={{paddingTop:50}}>
+          <Text style={s.title}>
+            Title
+          </Text>
+          <Text style={s.content}>
             In this we put the iframe from pol.is
             Mussum Ipsum, cacilds vidis litro abertis. 
             Atirei o pau no gatis, per gatis num morreus. 
@@ -60,9 +63,9 @@ var onButtonPressPushSave= function(navigator){
 var NavigationBarRouteMapper = {
   LeftButton(route, navigator, index, navState) {
     return (
-      <View style={{padding:10}}>
+      <View>
       <Image 
-        style={{width: 60, height: 60}}
+        style={s.icon}
         source={require('./assets/images/ej_icon_03small.png')}
       /> 
       </View>
@@ -75,5 +78,25 @@ var NavigationBarRouteMapper = {
     return null;
   }
 };
+
+var s = StyleSheet.create({
+  icon: {
+    width: 70, 
+    height: 50
+  },
+  view:{
+    flex: 1, 
+    alignItems: 'center', 
+    justifyContent:'center'
+  },
+  content: {
+    padding: 10
+  },
+  title: {
+    fontSize: 40,
+    padding: 10,
+    fontWeight: 'bold'
+  }
+});
 
 module.exports = PushPage;

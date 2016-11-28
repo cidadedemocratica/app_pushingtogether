@@ -30,11 +30,6 @@ class MainPage extends Component {
   renderScene(route, navigator) {
     return (
      <View style={s.all}>
-        <ScrollView style={s.scroll}>
-          <Text>
-            Title/Subtitle/Some Text
-          </Text>
-        </ScrollView>
         <WebView
           javaScriptEnabled={true}
           source={{uri: 'http://www.3plusx.de/idc/test.html'}}
@@ -98,7 +93,6 @@ var s = StyleSheet.create({
     position: 'absolute',
     bottom: 10,
     right:0
-    
   },
   all: {
     flex: 1,
