@@ -36,19 +36,20 @@ class MainPage extends Component {
           </Text>
         </ScrollView>
         <WebView
-          style={{padding:0,margin:0}}
           javaScriptEnabled={true}
           source={{uri: 'http://www.3plusx.de/idc/test.html'}}
+          style={{marginTop: 50}}
+          scalesPageToFit={true}
         />
-        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+        <View style={s.buttons}>
           <View style={s.view}>
             <TouchableHighlight onPress={() => onButtonPressPush(this.props.navigator) }>
-            <Image style={{width: 75, height: 75}} source={require('./assets/images/ej_push_button_B_01.png')} />
+            <Image style={s.buttonImage} source={require('./assets/images/ej_push_button_B_01.png')} />
             </TouchableHighlight>
           </View>
           <View style={s.view}>
             <TouchableHighlight onPress={() => onButtonPressComment(this.props.navigator) }>
-            <Image style={{width: 75, height: 75}} source={require('./assets/images/ej_comment_button_A_01.png')}/>
+            <Image style={s.buttonImage} source={require('./assets/images/ej_comment_button_A_01.png')}/>
             </TouchableHighlight>
           </View>
         </View>
@@ -90,8 +91,15 @@ var NavigationBarRouteMapper = {
   }
 };
 
-
 var s = StyleSheet.create({
+  buttons:{
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    position: 'absolute',
+    bottom: 10,
+    right:0
+    
+  },
   all: {
     flex: 1,
   },
@@ -102,12 +110,10 @@ var s = StyleSheet.create({
     width: 70, 
     height: 50
   },
-  scroll: {
-    paddingTop: 60,
-    padding: 20
+  buttonImage: {
+    width: 75, 
+    height: 75
   }
 });
-
-
 
 module.exports = MainPage;
