@@ -18,8 +18,7 @@ module.exports = StyleSheet.create({
     padding: 10
   },
   title: {
-    fontSize: 40,
-    padding: 10,
-    fontWeight: 'bold'
+    fontSize: 30,
+    paddingLeft: 10,
   }
 });
