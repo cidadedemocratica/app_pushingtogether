@@ -29,8 +29,8 @@ class MainPage extends Component {
   }
   renderScene(route, navigator) {
     return (
-      <View style={{flex: 1}}>
-        <ScrollView style={{paddingLeft:20,paddingRight:20}}>
+     <View style={s.all}>
+        <ScrollView style={s.scroll}>
           <Text>
             Title/Subtitle/Some Text
           </Text>
@@ -41,12 +41,12 @@ class MainPage extends Component {
           source={{uri: 'http://www.3plusx.de/idc/test.html'}}
         />
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-          <View style={{padding:10}}>
+          <View style={s.view}>
             <TouchableHighlight onPress={() => onButtonPressPush(this.props.navigator) }>
             <Image style={{width: 75, height: 75}} source={require('./assets/images/ej_push_button_B_01.png')} />
             </TouchableHighlight>
           </View>
-          <View style={{padding:10}}>
+          <View style={s.view}>
             <TouchableHighlight onPress={() => onButtonPressComment(this.props.navigator) }>
             <Image style={{width: 75, height: 75}} source={require('./assets/images/ej_comment_button_A_01.png')}/>
             </TouchableHighlight>
@@ -74,9 +74,9 @@ var onButtonPressComment = function(navigator) {
 var NavigationBarRouteMapper = {
   LeftButton(route, navigator, index, navState) {
     return (
-      <View style={{padding:0}}>
+      <View>
       <Image
-        style={{width: 70, height: 50}}
+        style={s.icon}
         source={require('./assets/images/ej_icon_03small.png')}
       />
       </View>
@@ -89,5 +89,25 @@ var NavigationBarRouteMapper = {
     return null;
   }
 };
+
+
+var s = StyleSheet.create({
+  all: {
+    flex: 1,
+  },
+  view:{
+    padding: 10
+  },
+  icon: {
+    width: 70, 
+    height: 50
+  },
+  scroll: {
+    paddingTop: 60,
+    padding: 20
+  }
+});
+
+
 
 module.exports = MainPage;
