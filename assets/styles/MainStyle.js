@@ -9,8 +9,8 @@ module.exports = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     position: 'absolute',
-    bottom: 10,
-    right:0
+    bottom: 5,
+    right: 5
   },
   all: {
     flex: 1,
@@ -19,7 +19,7 @@ module.exports = StyleSheet.create({
     padding: 10
   },
   buttonImage: {
-    width: 75, 
-    height: 75
+    width: 50,
+    height: 50
   }
 });
