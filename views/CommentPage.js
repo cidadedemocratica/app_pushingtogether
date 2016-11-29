@@ -33,29 +33,16 @@ export default class CommentPage extends Component {
     return (
       <View style={s.all}>
         <ScrollView style={s.content}>
-          <Text style={s.title}>
-            Title
-          </Text>
-          <Text>
-            Mussum Ipsum, cacilds vidis litro abertis.
-            Atirei o pau no gatis, per gatis num morreus.
-            Copo furadis é disculpa de bebadis, arcu quam
-            euismod magna. Si num tem leite então bota uma
-            pinga aí cumpadi! Nec orci ornare consequat.
-            Praesent lacinia ultrices consectetur. Sed non
-            ipsum felis.
-          </Text>
           <TextInput
             multiline={true}
-            numberOfLines={4}
-            maxLenght={40}
+            numberOfLines={40}
+            maxLength={400}
             style={s.input}
+            placeholder="Contribute to the discussion with your comment....."
+            placeholderTextColor="silver"
             onChangeText={(text) => this.setState({text})}
           />
-          <Icon.Button name="send" onPress={() => onButtonPressCommentSave(this.props.navigator) } accessibilityLabel="Comment" >
-            Send
-          </Icon.Button>
-
+          <Button onPress={() => onButtonPressCommentSave(this.props.navigator) } title="Comment" accessibilityLabel="Send a comment to the conversation" />
         </ScrollView>
       </View>
     );
