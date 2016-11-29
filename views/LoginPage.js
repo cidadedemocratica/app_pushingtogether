@@ -35,7 +35,7 @@ export default class LoginPage extends Component {
         />
         <ScrollView style={{paddingLeft:40,paddingTop: 20, paddingRight: 40}}>
           <Text style={s.sign} >
-            <Icon name="sign-in" size={35} /> Sign In
+            <Icon name="sign-in" size={30} /> Sign In
           </Text>
           <Icon.Button name="facebook" backgroundColor="#3b5998" onPress={() => onButtonPressFacebook(this.props.navigator)} accessibilityLabel="Login to facebook" >
             Login with Facebook
@@ -45,7 +45,7 @@ export default class LoginPage extends Component {
             Sign in with Google
           </Icon.Button>
           <Text style={s.text}>If you enter with google you agree with our terms of use</Text>
-          <Text style={s.text}>If you click 'Sign in with Facebook' and are not a pol.is user, you will be registered and you agree to the pol.is terms and privacy policy</Text>
+          <Text style={s.text}>If you sign in here and are not a pol.is user, you will be registered and you agree to the pol.is terms and privacy policy</Text>
         </ScrollView>
       </View>
     );
