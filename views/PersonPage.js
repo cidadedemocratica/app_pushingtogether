@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-class PersonPage extends Component {
+
 
 var NavigationBarRouteMapper = require('./partials/HeaderBar');
 

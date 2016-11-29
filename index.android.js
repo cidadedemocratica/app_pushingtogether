@@ -97,7 +97,7 @@ class App extends Component {
 }
 
 
-BackAndroid.addEventListener('hardwareBackPress', function() {  
+BackAndroid.addEventListener('hardwareBackPress', function() {
   if (_navigator.getCurrentRoutes().length === 2 ) {
      return false;
   }
@@ -107,20 +107,20 @@ BackAndroid.addEventListener('hardwareBackPress', function() {
 
 var s = StyleSheet.create({
   view: {
-    flex: 1, 
-    alignItems: 'stretch', 
+    flex: 1,
+    alignItems: 'stretch',
     justifyContent: 'center'
   },
   touchNoRoute: {
-    flex: 1, 
-    alignItems: 'center', 
+    flex: 1,
+    alignItems: 'center',
     justifyContent: 'center'
   },
   textNoRoute: {
-    color: 'red', 
+    color: 'red',
     fontWeight: 'bold'
   }
-    
+
 });
 
 AppRegistry.registerComponent('app_pushingtogether', () => App);
