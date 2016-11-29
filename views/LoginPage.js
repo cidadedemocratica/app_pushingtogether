@@ -57,5 +57,5 @@ var onButtonPressFacebook = function(navigator) {
     navigator.push({id: 'MainPage'})
 };
 var onButtonPressGoogle = function(navigator) {
-    navigator.push({id: 'MainPage'})
+    navigator.push({id: 'Google'})
 };

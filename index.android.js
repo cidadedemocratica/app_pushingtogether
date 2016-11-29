@@ -20,6 +20,7 @@ import PersonPage from './views/PersonPage';
 import CommentPage from './views/CommentPage';
 import PushPage from './views/PushPage';
 import NoNavigatorPage from './views/NoNavigatorPage';
+import ErrorPage from './views/ErrorPage';
 var _navigator;
 
 class App extends Component {
@@ -86,12 +87,8 @@ class App extends Component {
   }
   noRoute(navigator) {
     return (
-      <View style={s.view}>
-        <TouchableOpacity style={s.touchNoRoute}
-            onPress={() => navigator.pop()}>
-          <Text style={s.textNoRoute}>No existem rotas para este contenido</Text>
-        </TouchableOpacity>
-      </View>
+      <ErrorPage
+          navigator={navigator} />
     );
   }
 }

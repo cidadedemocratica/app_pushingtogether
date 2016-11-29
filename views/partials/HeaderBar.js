@@ -10,9 +10,13 @@ var s = require('../../assets/styles/partials/HeaderStyle');
 module.exports = {
   LeftButton(route, navigator, index, navState) {
     return (
-      <View style={s.view}>
+      <View
+        style={s.view}
+        onPress={() => this.props.navigator.push({id: 'MainPage'})}
+      >
       <Image
         style={s.logo}
+        onPress={() => this.props.navigator.push({id: 'MainPage'})}
         source={require('../../assets/images/ej_icon_03small_1.png')}
       />
       </View>

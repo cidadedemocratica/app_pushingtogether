@@ -12,7 +12,8 @@ module.exports = StyleSheet.create({
   },
   view:{
     margin: 0,
-    marginTop: 3,
+    marginTop: 0,
+    marginLeft: 0,
     padding: 0
   },
   label:{
