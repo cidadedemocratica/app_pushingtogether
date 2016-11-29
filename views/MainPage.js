@@ -12,6 +12,7 @@ import {
   Image,
   WebView,
 } from 'react-native';
+import Bounceable from "react-native-bounceable";
 
 var NavigationBarRouteMapper = require('./partials/HeaderBar');
 var s = require('../assets/styles/MainStyle');
@@ -38,16 +39,26 @@ export default class MainPage extends Component {
           scalesPageToFit={true}
         />
         <View style={s.buttons}>
-          <View style={s.view}>
-            <TouchableHighlight onPress={() => onButtonPressPush(this.props.navigator) }>
-            <Image style={s.buttonImage} source={require('../assets/images/ej_push_button_B_01.png')} />
-            </TouchableHighlight>
-          </View>
-          <View style={s.view}>
-            <TouchableHighlight onPress={() => onButtonPressComment(this.props.navigator) }>
-            <Image style={s.buttonImage} source={require('../assets/images/ej_comment_button_A_01.png')}/>
-            </TouchableHighlight>
-          </View>
+
+          <Bounceable
+            onPress={() => onButtonPressPush(this.props.navigator) }
+            level={1.1}>
+            <View style={s.view}>
+              <TouchableHighlight onPress={() => onButtonPressPush(this.props.navigator) }>
+              <Image style={s.buttonImage} source={require('../assets/images/ej_push_button_B_01.png')} />
+              </TouchableHighlight>
+            </View>
+          </Bounceable>
+          <Bounceable
+            onPress={() => onButtonPressComment(this.props.navigator) }
+            level={1.1}>
+
+            <View style={s.view}>
+              <TouchableHighlight onPress={() => onButtonPressComment(this.props.navigator) }>
+              <Image style={s.buttonImage} source={require('../assets/images/ej_comment_button_A_01.png')}/>
+              </TouchableHighlight>
+            </View>
+          </Bounceable>
         </View>
       </View>
     );
