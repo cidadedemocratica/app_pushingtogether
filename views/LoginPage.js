@@ -6,6 +6,7 @@ import {
   Text,
   Navigator,
   Button,
+  ScrollView,
   TouchableHighlight,
   TouchableOpacity,
   Image,
@@ -20,28 +21,32 @@ export default class LoginPage extends Component {
     return (
       <Navigator
           renderScene={this.renderScene.bind(this)}
-          navigationBar={
-            <Navigator.NavigationBar
-                routeMapper={NavigationBarRouteMapper} />
-          } />
+      />
     );
   }
 
   renderScene(route, navigator) {
     return (
-      <View style={s.all}>
-        <Text style={s.sign} >
-          <Icon name="sign-in" size={30} /> Sign In
-        </Text>
-        <Icon.Button name="facebook" backgroundColor="#3b5998" onPress={() => onButtonPressFacebook(this.props.navigator)} accessibilityLabel="Login to facebook" >
-          Login with Facebook
-        </Icon.Button>
-        <Text style={s.text}>If you enter with facebook you agree with our terms of use</Text>
-        <Icon.Button name="google" backgroundColor="#4285f4" onPress={() => onButtonPressGoogle(this.props.navigator)} accessibilityLabel="Login to google" >
-          Sign in with Google
-        </Icon.Button>
-        <Text style={s.text}>If you enter with google you agree with our terms of use</Text>
-        <Text style={s.text}>If you click 'Sign in with Facebook' and are not a pol.is user, you will be registered and you agree to the pol.is terms and privacy policy</Text>
+      <View style={{}}>
+        <Image
+          style={{ }}
+          source={require('../assets/images/ej_icon_03extra_1.png')}
+
+        />
+        <ScrollView style={{paddingLeft:40,paddingTop: 20, paddingRight: 40}}>
+          <Text style={s.sign} >
+            <Icon name="sign-in" size={30} /> Sign In
+          </Text>
+          <Icon.Button name="facebook" backgroundColor="#3b5998" onPress={() => onButtonPressFacebook(this.props.navigator)} accessibilityLabel="Login to facebook" >
+            Login with Facebook
+          </Icon.Button>
+          <Text style={s.text}>If you enter with facebook you agree with our terms of use</Text>
+          <Icon.Button name="google" backgroundColor="#4285f4" onPress={() => onButtonPressGoogle(this.props.navigator)} accessibilityLabel="Login to google" >
+            Sign in with Google
+          </Icon.Button>
+          <Text style={s.text}>If you enter with google you agree with our terms of use</Text>
+          <Text style={s.text}>If you sign in here and are not a pol.is user, you will be registered and you agree to the pol.is terms and privacy policy</Text>
+        </ScrollView>
       </View>
     );
   }
