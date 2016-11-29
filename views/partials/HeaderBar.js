@@ -13,7 +13,7 @@ module.exports = {
       <View style={s.view}>
       <Image
         style={s.logo}
-        source={require('../../assets/images/ej_icon_03small.png')}
+        source={require('../../assets/images/ej_icon_03small_1.png')}
       />
       </View>
     );
