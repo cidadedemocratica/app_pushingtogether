@@ -7,6 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "axion": "^0.1.0",
     "react": "~15.4.0-rc.4",
     "react-native": "0.38.0",
     "react-native-auto-expanding-textinput": "0.0.5",
