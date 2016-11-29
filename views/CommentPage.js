@@ -36,6 +36,7 @@ export default class CommentPage extends Component {
           <TextInput
             multiline={true}
             numberOfLines={40}
+            autoFocus = {true}
             maxLength={400}
             style={s.input}
             placeholder="Contribute to the discussion with your comment....."

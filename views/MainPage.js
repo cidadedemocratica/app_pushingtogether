@@ -34,7 +34,7 @@ export default class MainPage extends Component {
      <View style={s.all}>
         <WebView
           javaScriptEnabled={true}
-          source={require('./test.html')}
+          source={require('../assets/public/test.html')}
           style={{marginTop: 50}}
           scalesPageToFit={true}
         />
