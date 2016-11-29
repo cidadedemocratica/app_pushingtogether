@@ -38,13 +38,13 @@ export default class PushPage extends Component {
           </Text>
           <Text style={s.content}>
             In this we put the iframe from pol.is
-            Mussum Ipsum, cacilds vidis litro abertis. 
-            Atirei o pau no gatis, per gatis num morreus. 
-            Copo furadis é disculpa de bebadis, arcu quam 
-            euismod magna. Si num tem leite então bota uma 
-            pinga aí cumpadi! Nec orci ornare consequat. 
-            Praesent lacinia ultrices consectetur. Sed non 
-            ipsum felis. 
+            Mussum Ipsum, cacilds vidis litro abertis.
+            Atirei o pau no gatis, per gatis num morreus.
+            Copo furadis é disculpa de bebadis, arcu quam
+            euismod magna. Si num tem leite então bota uma
+            pinga aí cumpadi! Nec orci ornare consequat.
+            Praesent lacinia ultrices consectetur. Sed non
+            ipsum felis.
           </Text>
         </ScrollView>
       </View>
@@ -58,6 +58,6 @@ export default class PushPage extends Component {
   }
 }
 var onButtonPressPushSave= function(navigator){
-  /* TODO: send comment for backend if ok go to MainPage else call a alert and stay in this page */ 
+  /* TODO: send comment for backend if ok go to MainPage else call a alert and stay in this page */
   navigator.push({id: 'MainPage'})
 }

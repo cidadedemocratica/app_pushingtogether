@@ -11,12 +11,12 @@ module.exports = StyleSheet.create({
     justifyContent: 'center'
   },
   sign :{
-    fontSize: 35,
+    fontSize: 30,
     paddingBottom: 30
   },
   text:{
-    paddingLeft: 50,
-    paddingRight: 50,
+    paddingLeft: 20,
+    paddingRight: 20,
     paddingTop: 10,
     paddingBottom: 10,
   },
