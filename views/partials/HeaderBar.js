@@ -10,7 +10,7 @@ var s = require('../../assets/styles/partials/HeaderStyle');
 module.exports = {
   LeftButton(route, navigator, index, navState) {
     return (
-      <View>
+      <View style={s.view}>
       <Image
         style={s.logo}
         source={require('../../assets/images/ej_icon_03small.png')}
