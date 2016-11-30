@@ -45,7 +45,7 @@ export default class MainPage extends Component {
             level={1.1}>
             <View style={s.view}>
               <TouchableHighlight onPress={() => onButtonPressPush(this.props.navigator) }>
-              <Image style={s.buttonImage} source={require('../assets/buttons/images/ej_button_push_B_01.png')} />
+              <Image style={s.buttonImage} source={require('../assets/images/buttons/ej_button_push_B_01.png')} />
               </TouchableHighlight>
             </View>
           </Bounceable>
