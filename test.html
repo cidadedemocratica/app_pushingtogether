@@ -3,40 +3,25 @@
     <META HTTP-EQUIV="Access-Control-Allow-Origin" CONTENT="*" />
   </head>
 <body>
-<div
-  class='polis'
-  data-conversation_id='78nfpz'
-  data-site_id='polis_site_id_U7six8EsjLXPbR2rCR'>
-</div>
+
+
+<iframe src="https://pol.is/78nfpz?parent_url=http%3A%2F%2Fwww.3plusx.de%2Fidc%2Ftest.html&amp;referrer=" style="background-color: rgb(247, 247, 247);" id="polis_78nfpz" width="100%" height="100%"></iframe>
 <script async='false' src='https://pol.is/embed.js'></script>
 
 <script type = 'text/javascript'>
-
-  // var iframe = document.getElementsByTagName('iframe')[0];
-  // var iframe_document = iframe.contentWindow;
-  // iframe.querySelectorAll('.conversationViewRoot > div:nth-child(9)').html();
-  // iframe_document.querySelectorAll('.conversationViewRoot > div:nth-child(9)').style.display = 'none';
-
-  // var doc = (iframe.contentWindow || iframe.contentDocument).document;
-  // doc.body.style.backgroundColor = 'green';
-  console.log("js");
-
-// document.onreadystatechange = function () {
-  // if (document.readyState === "complete") {
-window.onload = function () {
-    var iframe = document.getElementsByTagName('iframe')[0].contentWindow;
-    console.log("check for iframe");
-    iframe.onload(function() {
-      console.log("iframe loaded");
+  console.log("*** js called");
+  window.onload = function () {
+      var iframe = document.getElementsByTagName('iframe')[0];
+      iframe.style.border = 'none';
+      console.log("*** check for iframe");
       var doc = (iframe.contentWindow || iframe.contentDocument).document;
-      doc.querySelectorAll('.conversationViewRoot');
-    });
-// } else {
-//  console.log("document not ready yet");
-// }
-// };
-}
-
+      doc.onload(function() {
+        console.log("*** iframe loaded");
+        // doc.querySelectorAll('.conversationViewRoot');
+        var social_div = doc.querySelectorAll('.POLIS_HEADLINE > div:nth-child(1)');
+        social_div.style.display = 'none';
+      });
+  }
 </script>
 
 </body>
