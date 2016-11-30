@@ -37,15 +37,16 @@ export default class PushPage extends Component {
             Title
           </Text>
           <Text style={s.content}>
-            In this we put the iframe from pol.is
-            Mussum Ipsum, cacilds vidis litro abertis.
-            Atirei o pau no gatis, per gatis num morreus.
-            Copo furadis é disculpa de bebadis, arcu quam
-            euismod magna. Si num tem leite então bota uma
-            pinga aí cumpadi! Nec orci ornare consequat.
-            Praesent lacinia ultrices consectetur. Sed non
-            ipsum felis.
+                          Push!
+              Here you can push your
+              arguments and comments
+              deeper into the conversation
           </Text>
+          <View style={{flex: 1, flexDirection: 'row', paddingLeft: 20, paddingRight: 20 }}>
+            <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+            <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
+            <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
+          </View>
         </ScrollView>
       </View>
     );
