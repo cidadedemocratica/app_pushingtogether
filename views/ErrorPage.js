@@ -36,7 +36,8 @@ export default class ErrorPage extends Component {
         />
         <View style={{marginTop: 50}}>
           <Text style={s.text}>Oups, sorry for that!!!{"\n"}(I just got started and I make sometimes errors.)</Text>
-          <Text style={s.text}>Please try again (later) or file a bug report at our GitHub page.</Text>
+          <Text style={s.text}>Please try again (later) or {"\n"}
+          file a bug report at our GitHub page.</Text>
         </View>
       </View>
     );

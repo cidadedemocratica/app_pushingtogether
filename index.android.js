@@ -78,7 +78,13 @@ class App extends Component {
     }
     if (routeId === 'NoNavigatorPage') {
       return (
-        <NoNavigatorPage
+        <ErrorPage
+            navigator={navigator} />
+      );
+    }
+    if (routeId === 'ErrorPage') {
+      return (
+        <ErrorPage
             navigator={navigator} />
       );
     }

@@ -16,7 +16,7 @@ module.exports = StyleSheet.create({
     flex: 1,
   },
   view:{
-    padding: 0
+    paddingLeft: 10
   },
   buttonImage: {
     width: 50,
