@@ -13,7 +13,7 @@ module.exports = StyleSheet.create({
     right: 5
   },
   all: {
-    flex: 1,
+    flex: 1
   },
   view:{
     paddingLeft: 10
@@ -21,5 +21,12 @@ module.exports = StyleSheet.create({
   buttonImage: {
     width: 50,
     height: 50
-  }
+  },
+  input: {
+    height: 100,
+    width: 200,
+    backgroundColor: 'white',
+    margin: 10
+
+  },
 });

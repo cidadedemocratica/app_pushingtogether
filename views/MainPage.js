@@ -3,12 +3,14 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   View,
+  Modal,
   Text,
   Navigator,
   TouchableHighlight,
   TouchableOpacity,
   ScrollView,
   Button,
+  TextInput,
   Image,
   WebView,
 } from 'react-native';
@@ -16,8 +18,18 @@ import Bounceable from "react-native-bounceable";
 
 var NavigationBarRouteMapper = require('./partials/HeaderBar');
 var s = require('../assets/styles/MainStyle');
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class MainPage extends Component {
+
+  state = {
+    modalVisible: false,
+  }
+
+  setModalVisible(visible) {
+    this.setState({modalVisible: visible});
+  }
+
   render() {
     return (
       <Navigator
@@ -32,6 +44,47 @@ export default class MainPage extends Component {
   renderScene(route, navigator) {
     return (
      <View style={s.all}>
+
+        <Modal
+          animationType={"fade"}
+          transparent={true}
+          visible={this.state.modalVisible}
+          onRequestClose={() => {alert("Modal has been closed.")}}
+          >
+          <View style={{flex: 1, backgroundColor: 'rgba(100, 100, 100, 0.6)'}}>
+           <View style={{marginTop: 15, marginLeft: 20, marginRight: 20}}>
+
+
+              <ScrollView style={{ padding: 20, backgroundColor: '#DAEBF2' }}>
+
+                <View style={{marginBottom: 10 }}>
+                  <Bounceable
+                onPress={() => this.setModalVisible(!this.state.modalVisible) }
+                level={1.1}>
+
+                    <Text style={{ textAlign: 'right' }} >
+                      <Icon name="close" size={24} />
+                    </Text>
+                  </Bounceable>
+                </View>
+                <TextInput
+                  multiline={true}
+                  numberOfLines={40}
+                  autoFocus = {true}
+                  maxLength={400}
+                  style={s.input}
+                  placeholder="Contribute to the discussion with your comment....."
+                  placeholderTextColor="silver"
+                  onChangeText={(text) => this.setState({text})}
+                />
+                <View style={{paddingLeft: 10, paddingRight: 30 }}>
+                  <Button onPress={() => onButtonPressCommentSave(this.props.navigator) } title="Comment" accessibilityLabel="Send a comment to the conversation" />
+                </View>
+              </ScrollView>
+           </View>
+          </View>
+        </Modal>
+
         <WebView
           javaScriptEnabled={true}
           source={require('../test.html')}
@@ -50,13 +103,11 @@ export default class MainPage extends Component {
             </View>
           </Bounceable>
           <Bounceable
-            onPress={() => onButtonPressComment(this.props.navigator) }
+            onPress={() => this.setModalVisible(true) }
             level={1.1}>
 
             <View style={s.view}>
-              <TouchableHighlight onPress={() => onButtonPressComment(this.props.navigator) }>
               <Image style={s.buttonImage} source={require('../assets/images/buttons/ej_button_comment_B_01.png')}/>
-              </TouchableHighlight>
             </View>
           </Bounceable>
         </View>
