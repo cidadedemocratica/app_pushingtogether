@@ -9,6 +9,7 @@ import {
   TouchableHighlight,
   TouchableOpacity,
   Image,
+  Linking
 } from 'react-native';
 
 var NavigationBarRouteMapper = require('./partials/HeaderBar');
@@ -34,10 +35,21 @@ export default class ErrorPage extends Component {
           style={{ }}
           source={require('../assets/images/ej_404_01_graphic.png')}
         />
-        <View style={{marginTop: 50}}>
+        <View style={{marginTop: 50, paddingLeft: 30, paddingRight: 30}}>
           <Text style={s.text}>Oups, sorry for that!!!{"\n"}(I just got started and I make sometimes errors.)</Text>
-          <Text style={s.text}>Please try again (later) or {"\n"}
-          file a bug report at our GitHub page.</Text>
+          <Text style={s.text}>Please try again (later) or</Text>
+          <View>
+          <TouchableOpacity
+             onPress={ () =>{
+               Linking.openURL("https://github.com/cidadedemocratica/app_pushingtogether")
+               .catch(err => console.error('An error occurred', err)); }}
+          >
+           <Text style={s.textLink}>
+              or file a bug report at our GitHub page.
+           </Text>
+          </TouchableOpacity>
+          </View>
+
         </View>
       </View>
     );

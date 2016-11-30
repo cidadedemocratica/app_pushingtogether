@@ -10,6 +10,7 @@ import {
   TouchableHighlight,
   TouchableOpacity,
   Image,
+  Linking
 } from 'react-native';
 
 var NavigationBarRouteMapper = require('./partials/HeaderBar');
@@ -33,19 +34,32 @@ export default class LoginPage extends Component {
           source={require('../assets/images/ej_icon_03extra_1.png')}
 
         />
-        <ScrollView style={{paddingLeft:40,paddingTop: 20, paddingRight: 40}}>
+        <ScrollView style={{paddingLeft:50,paddingTop: 20, paddingRight: 40}}>
+          {/*
+          // <Text style={s.sign} >
+          //  <Icon name="sign-in" size={30} /> Sign In
+          //  </Text>
+           */}
           <Text style={s.sign} >
-            <Icon name="sign-in" size={30} /> Sign In
+            Sign In
           </Text>
-          <Icon.Button name="facebook" backgroundColor="#3b5998" onPress={() => onButtonPressFacebook(this.props.navigator)} accessibilityLabel="Login to facebook" >
+          <Icon.Button name="facebook" backgroundColor="#3b5998" onPress={() => onButtonPressFacebook(this.props.navigator)} accessibilityLabel="Login to Facebook" >
             Login with Facebook
           </Icon.Button>
-          <Text style={s.text}>If you enter with facebook you agree with our terms of use</Text>
-          <Icon.Button name="google" backgroundColor="#4285f4" onPress={() => onButtonPressGoogle(this.props.navigator)} accessibilityLabel="Login to google" >
+          <Text style={s.gap} >
+          </Text>
+          <Icon.Button name="google" backgroundColor="#4285f4" onPress={() => onButtonPressGoogle(this.props.navigator)} accessibilityLabel="Login to Google" >
             Sign in with Google
           </Icon.Button>
-          <Text style={s.text}>If you enter with google you agree with our terms of use</Text>
           <Text style={s.text}>If you sign in here and are not a pol.is user, you will be registered and you agree to the pol.is terms and privacy policy</Text>
+          <TouchableOpacity
+             onPress={ () =>{
+               Linking.openURL("http://medialab-prado.es/article/madrid-inteligencia-colectiva-para-la-democracia")
+               .catch(err => console.error('An error occurred', err)); }}
+          >
+           <Text style={s.textSmallLink} >Application made by Empujando Juntos Workshop @ IDC, Medialab Prado, Madrid, 2016</Text>
+
+          </TouchableOpacity>
         </ScrollView>
       </View>
     );
