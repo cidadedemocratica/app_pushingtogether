@@ -28,10 +28,10 @@ export default class LoginPage extends Component {
 
   renderScene(route, navigator) {
     return (
-      <View style={{}}>
+      <View style={s.view}>
         <Image
           style={{ }}
-          source={require('../assets/images/ej_icon_03extra_1.png')}
+          source={require('../assets/images/ej_app_icon_large_w.png')}
 
         />
         <ScrollView style={{paddingLeft:50,paddingTop: 20, paddingRight: 40}}>

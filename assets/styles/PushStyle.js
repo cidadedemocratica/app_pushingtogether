@@ -26,7 +26,7 @@ module.exports = StyleSheet.create({
     textAlign: 'center'
   },
   text: {
-    paddingTop: 10,
+    paddingTop: 5,
     paddingRight: 5,
     paddingBottom: 5,
     paddingLeft: 10,
@@ -39,7 +39,7 @@ module.exports = StyleSheet.create({
     fontSize: 10
   },
   textSmallCenter: {
-    paddingTop: 0,
+    paddingTop: 5,
     paddingRight: 10,
     paddingBottom: 5,
     paddingLeft: 10,

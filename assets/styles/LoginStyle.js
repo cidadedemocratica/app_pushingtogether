@@ -10,6 +10,9 @@ module.exports = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   },
+  view:{
+    backgroundColor: '#DAEBF2'
+  },
   sign :{
     fontSize: 30,
     paddingBottom: 15
