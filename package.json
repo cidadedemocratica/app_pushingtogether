@@ -12,6 +12,7 @@
     "react-native": "0.38.0",
     "react-native-auto-expanding-textinput": "0.0.5",
     "react-native-bounceable": "^0.2.1",
+    "react-native-fcm": "^2.4.0",
     "react-native-vector-icons": "^3.0.0"
   },
   "devDependencies": {
