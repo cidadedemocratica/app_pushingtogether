@@ -8,7 +8,8 @@ module.exports = StyleSheet.create({
   header: {
     backgroundColor: 'transparent',
     margin: 0,
-    paddingTop: 0
+    paddingTop: 0,
+    paddingLeft: 0
   },
   view:{
     margin: 0,
@@ -22,6 +23,8 @@ module.exports = StyleSheet.create({
   logo: {
     width: 70,
     height: 50,
-    padding: 0
+    padding: 0,
+    margin: 0,
+    alignSelf: 'flex-start',
   },
 });

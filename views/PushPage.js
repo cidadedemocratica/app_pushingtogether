@@ -35,7 +35,7 @@ export default class PushPage extends Component {
         <ScrollView style={{paddingTop:15, paddingLeft: 10, paddingRight: 10}}>
 
           <View style={{flex: 1, flexDirection: 'row', paddingTop: 10,paddingLeft: 20, paddingRight: 20, paddingBottom: 20,justifyContent: 'center' }}>
-              <Image style={s.imageHeader} source={require('../assets/images/headers/ej_header_push_B_01b.png')} />
+              <Image style={s.imageHeader} source={require('../assets/images/headers/ej_header_push_B_01.png')} />
           </View>
           <View style={{flex: 1, flexDirection: 'row', paddingTop: 0,paddingLeft: 20, paddingRight: 20, paddingBottom: 20,justifyContent: 'center' }}>
             <View style={{}}>

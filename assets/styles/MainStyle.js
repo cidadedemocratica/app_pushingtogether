@@ -6,8 +6,8 @@ import {
 
 module.exports = StyleSheet.create({
   buttons:{
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: 'column',
+    justifyContent: 'center',
     position: 'absolute',
     bottom: 5,
     right: 5
@@ -16,15 +16,17 @@ module.exports = StyleSheet.create({
     flex: 1
   },
   view:{
-    paddingLeft: 10
+    paddingLeft: 10,
+    paddingTop: 10,
+    paddingRight: 5
   },
   buttonImage: {
     width: 50,
     height: 50
   },
   imageHeader: {
-    width: 70,
-    height: 70
+    width: 75,
+    height: 75
   },
   input: {
     height: 100,

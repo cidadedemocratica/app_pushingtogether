@@ -16,8 +16,7 @@ module.exports = {
       >
       <Image
         style={s.logo}
-        onPress={() => this.props.navigator.push({id: 'MainPage'})}
-        source={require('../../assets/images/ej_icon_03small_1.png')}
+        source={require('../../assets/images/ej_app_icon_small_B.png')}
       />
       </View>
     );

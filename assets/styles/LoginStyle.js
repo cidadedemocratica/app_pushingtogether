@@ -8,10 +8,11 @@ module.exports = StyleSheet.create({
   all: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
   },
   view:{
-    backgroundColor: '#DAEBF2'
+    backgroundColor: '#DAEBF2',
+    justifyContent: 'center',
+    flex: 1
   },
   sign :{
     fontSize: 30,
@@ -22,6 +23,12 @@ module.exports = StyleSheet.create({
     paddingRight: 0,
     paddingTop: 10,
     paddingBottom: 10,
+  },
+  textNoPadding:{
+    paddingLeft: 0,
+    paddingRight: 0,
+    paddingTop: 2,
+    paddingBottom: 2,
   },
   textSmall: {
     paddingTop: 10,
@@ -43,7 +50,8 @@ module.exports = StyleSheet.create({
     paddingBottom: 0,
     paddingLeft: 0,
     fontSize: 10,
-    textDecorationLine: 'underline'
+    textDecorationLine: 'underline',
+    color: '#666'
   },
   button: {
     padding: 50,

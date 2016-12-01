@@ -35,9 +35,9 @@ export default class ErrorPage extends Component {
           style={{ }}
           source={require('../assets/images/ej_404_01_graphic.png')}
         />
-        <View style={{marginTop: 50, paddingLeft: 30, paddingRight: 30}}>
-          <Text style={s.text}>Oups, sorry for that!!!{"\n"}(I just got started and I make sometimes errors.)</Text>
-          <Text style={s.text}>Please try again (later) or</Text>
+        <View style={{paddingTop: 30, paddingLeft: 30, paddingRight: 30}}>
+          <Text style={s.textNoPadding}>Oups, sorry for that!!!{"\n"}(I just got started and I make sometimes errors.)</Text>
+          <Text style={s.textNoPadding}>Please try again (later) or</Text>
           <View>
           <TouchableOpacity
              onPress={ () =>{

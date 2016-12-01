@@ -107,7 +107,7 @@ export default class MainPage extends Component {
 
 
                 <View style={{flex: 1, flexDirection: 'row', paddingTop: 5,paddingLeft: 15, paddingRight: 15, paddingBottom: 0,marginBottom: 10, justifyContent: 'center' }}>
-                    <Image style={s.imageHeader} source={require('../assets/images/headers/ej_header_push_B_01b.png')} />
+                    <Image style={s.imageHeader} source={require('../assets/images/headers/ej_header_push_B_01.png')} />
                 </View>
                 <View style={{flex: 1, flexDirection: 'row', paddingTop: 0,paddingLeft: 20, paddingRight: 20, paddingBottom: 20,justifyContent: 'center' }}>
                   <View style={{}}>
